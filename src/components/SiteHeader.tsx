@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 w-full">
-      <div className="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-5 md:px-12">
+    <header className="sticky top-0 z-50 w-full bg-cream">
+      <div className="mx-auto flex max-w-[1500px] items-center justify-between gap-4 px-6 py-5 md:px-12">
         <Link
           href="/"
           className="font-display text-lg tracking-wide text-navy hover:opacity-80"
@@ -16,7 +16,7 @@ export default function SiteHeader() {
             href="/gallery"
             className="text-sm uppercase tracking-widest text-navy hover:opacity-70"
           >
-            Portfolio
+            GALLERY
           </Link>
           <Link
             href="/booking"

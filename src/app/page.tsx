@@ -9,7 +9,7 @@ export default function HomePage() {
     <>
       {/* HERO — navy */}
       <section className="relative w-full overflow-hidden bg-navy text-lilac">
-        <div className="mx-auto grid max-w-[1500px] grid-cols-1 items-center gap-10 px-6 py-24 md:grid-cols-2 md:px-12 md:py-32">
+        <div className="mx-auto grid max-w-[1500px] grid-cols-1 items-center gap-10 px-6 py-14 md:grid-cols-2 md:px-12 md:py-32">
           <div>
             <h1 className="font-display text-7xl leading-[0.95] tracking-tight md:text-[9rem]">
               AVINATH
@@ -38,7 +38,7 @@ export default function HomePage() {
 
       {/* TESTIMONIAL 1 — cream */}
       <Section tone="cream">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
           <p className="col-span-12 text-sm uppercase tracking-widest md:col-span-3">
             fethr.app • London
           </p>
@@ -53,7 +53,7 @@ export default function HomePage() {
 
       {/* HERO IMAGE BAND */}
       <section className="bg-cream">
-        <div className="mx-auto max-w-[1500px] px-6 md:px-12">
+        <div className="mx-auto max-w-[1500px] px-6 py-14 md:px-12 md:py-32">
           <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl">
             <Image
               src={imageSrc("homeCoves")}
@@ -68,7 +68,7 @@ export default function HomePage() {
 
       {/* ABOUT + SERVICES — navy */}
       <Section tone="navy">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
           <div className="md:col-span-4">
             <p className="text-sm uppercase tracking-widest text-cream">
               A bit about me
@@ -105,9 +105,58 @@ export default function HomePage() {
         </div>
       </Section>
 
+      {/* HOW IT WORKS — cream */}
+      <section className="bg-cream">
+        <div className="mx-auto max-w-[1500px] px-6 py-14 md:px-12 md:py-32">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
+            <div className="md:col-span-5">
+              <p className="text-sm uppercase tracking-widest text-navy/50">
+                How it works
+              </p>
+              <h2 className="mt-4 font-display text-4xl leading-tight md:text-6xl">
+                A simple, transparent process
+              </h2>
+            </div>
+          </div>
+
+          <div className="mt-16 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                num: "01",
+                title: "Discovery Call",
+                desc: "We discuss your project goals, timeline and tech requirements in a free consultation.",
+              },
+              {
+                num: "02",
+                title: "Proposal & Scope",
+                desc: "You receive a detailed proposal with milestones, deliverables and transparent pricing.",
+              },
+              {
+                num: "03",
+                title: "Build & Iterate",
+                desc: "Development begins with weekly check-ins, live previews and agile sprints.",
+              },
+              {
+                num: "04",
+                title: "Launch & Support",
+                desc: "We ship your product, handle deployment and provide ongoing maintenance.",
+              },
+            ].map((step) => (
+              <div key={step.num} className="booking-step-card group">
+                <span className="booking-step-num">{step.num}</span>
+                <h3 className="mt-6 font-display text-2xl">{step.title}</h3>
+                <p className="mt-3 leading-relaxed text-navy/70">
+                  {step.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* PORTFOLIO PREVIEW — cream */}
       <Section tone="cream">
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-md">
             <Image
               src={imageSrc("homeSpacehero")}
@@ -135,7 +184,7 @@ export default function HomePage() {
       </Section>
 
       {/* TESTIMONIAL 2 — cream */}
-      <Section tone="cream" className="pt-0">
+      <Section tone="cream">
         <div className="mx-auto max-w-5xl">
           <blockquote className="font-display text-3xl leading-snug md:text-5xl">
             “Avinath has been an excellent developer for our project. He’s been
@@ -152,8 +201,8 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* FLUTTER COLOMBO — cream */}
-      <Section tone="cream" className="pt-0">
+      {/* FLUTTER COLOMBO — lilac */}
+      <Section tone="lilac">
         <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-12">
           <div className="md:col-span-7">
             <p className="font-display text-2xl leading-snug md:text-3xl">
@@ -187,7 +236,7 @@ export default function HomePage() {
       </Section>
 
       {/* MARQUEE CTA — cream */}
-      <section className="bg-cream py-16">
+      <section className="bg-cream py-14 md:py-32">
         <Marquee text="Let's create together" />
         <div className="mt-10 flex justify-center">
           <Link href="/booking" className="btn-outline-dark">
