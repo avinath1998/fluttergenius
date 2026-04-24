@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cream: #FFF6ED;
+  --navy: #001D44;
+  --lilac: #E8E1FD;
+  --font-ovo: "Ovo", Georgia, serif;
+  --font-almarai: "Almarai", ui-sans-serif, system-ui, sans-serif;
+}
+
+html,
+body {
+  background: var(--cream);
+  color: var(--navy);
+  font-family: var(--font-almarai);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Display serif helper */
+.font-display {
+  font-family: var(--font-ovo);
+}
+
+/* Outline buttons */
+.btn-outline {
+  @apply inline-flex items-center justify-center rounded-full border-2 px-6 py-2 uppercase tracking-wider transition hover:opacity-80;
+}
+.btn-outline-light {
+  @apply btn-outline border-lilac text-lilac;
+}
+.btn-outline-dark {
+  @apply btn-outline border-navy text-navy;
+}
+
+/* Marquee */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.marquee-track {
+  display: inline-flex;
+  gap: 2rem;
+  padding-right: 2rem;
+  animation: marquee-scroll 28s linear infinite;
+}
