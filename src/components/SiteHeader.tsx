@@ -19,10 +19,10 @@ export default function SiteHeader() {
             GALLERY
           </Link>
           <Link
-            href="/booking"
+            href="/booking#free-consultation"
             className="inline-flex items-center justify-center rounded-full border-[1.5px] border-navy px-5 py-1.5 text-xs uppercase tracking-widest text-navy transition hover:bg-navy hover:text-cream"
           >
-            Hire Me
+            Book a Free Consultation
           </Link>
         </nav>
       </div>

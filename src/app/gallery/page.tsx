@@ -59,11 +59,12 @@ const projects: Project[] = [
 ];
 
 export default function GalleryPage() {
+  const [featured, ...rest] = projects;
+
   return (
     <>
       {/* ─── HERO ─── */}
       <section className="portfolio-hero relative overflow-hidden bg-navy text-lilac">
-        {/* Decorative blobs */}
         <div className="portfolio-blob portfolio-blob--1" />
         <div className="portfolio-blob portfolio-blob--2" />
 
@@ -84,50 +85,70 @@ export default function GalleryPage() {
       {/* ─── PROJECTS ─── */}
       <section className="bg-cream">
         <div className="mx-auto max-w-[1500px] px-6 py-14 md:px-12 md:py-32">
-          <div className="flex flex-col gap-14 md:gap-24">
-            {projects.map((p, i) => (
-              <article
-                key={p.name}
-                className={`portfolio-project grid grid-cols-1 items-center gap-10 md:grid-cols-12 ${i % 2 === 1 ? "md:[direction:rtl]" : ""
-                  }`}
-              >
-                <div className="md:col-span-7 md:[direction:ltr]">
-                  <div className="portfolio-image-card group relative aspect-[4/3] w-full overflow-hidden rounded-2xl">
-                    <div className="portfolio-image-glow" />
-                    <Image
-                      src={imageSrc(p.image)}
-                      alt={imageAlt(p.image)}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 60vw"
-                      className="object-contain transition-transform duration-700 ease-out group-hover:scale-105"
-                    />
-                  </div>
+
+          {/* Featured project */}
+          <article className="grid grid-cols-1 items-center gap-10 border-b border-navy/10 pb-20 md:grid-cols-12 md:pb-32">
+            <div className="md:col-span-7">
+              <div className="portfolio-image-card group relative aspect-[4/3] w-full overflow-hidden rounded-2xl">
+                <div className="portfolio-image-glow" />
+                <Image
+                  src={imageSrc(featured.image)}
+                  alt={imageAlt(featured.image)}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 60vw"
+                  className="object-contain transition-transform duration-700 ease-out group-hover:scale-105"
+                />
+              </div>
+            </div>
+            <div className="md:col-span-4 md:col-start-9">
+              <p className="font-display text-7xl leading-none text-navy/10 md:text-8xl">01</p>
+              <div className="mt-4 flex flex-wrap items-center gap-3">
+                <h2 className="font-display text-4xl md:text-5xl">{featured.name}</h2>
+                <span className="portfolio-location-badge">{featured.location}</span>
+              </div>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {featured.tags.map((tag) => (
+                  <span key={tag} className="portfolio-tag">{tag}</span>
+                ))}
+              </div>
+              <p className="mt-6 leading-relaxed text-navy/70">{featured.description}</p>
+            </div>
+          </article>
+
+          {/* 2×2 grid */}
+          <div className="mt-20 grid grid-cols-1 gap-16 sm:grid-cols-2 md:mt-32 md:gap-x-12 md:gap-y-24">
+            {rest.map((p, i) => (
+              <article key={p.name} className="flex flex-col">
+                <div className="portfolio-image-card group relative aspect-[4/3] w-full overflow-hidden rounded-2xl">
+                  <div className="portfolio-image-glow" />
+                  <Image
+                    src={imageSrc(p.image)}
+                    alt={imageAlt(p.image)}
+                    fill
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                    className="object-contain transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
                 </div>
-                <div className="md:col-span-5 md:[direction:ltr]">
-                  <div className="flex items-center gap-3">
-                    <h2 className="font-display text-4xl md:text-5xl">
-                      {p.name}
-                    </h2>
-                    <span className="portfolio-location-badge">
-                      {p.location}
-                    </span>
+                <div className="mt-6">
+                  <p className="font-display text-4xl leading-none text-navy/10">
+                    0{i + 2}
+                  </p>
+                  <div className="mt-2 flex flex-wrap items-center gap-3">
+                    <h2 className="font-display text-3xl md:text-4xl">{p.name}</h2>
+                    <span className="portfolio-location-badge">{p.location}</span>
                   </div>
-                  <div className="mt-4 flex flex-wrap gap-2">
+                  <div className="mt-3 flex flex-wrap gap-2">
                     {p.tags.map((tag) => (
-                      <span key={tag} className="portfolio-tag">
-                        {tag}
-                      </span>
+                      <span key={tag} className="portfolio-tag">{tag}</span>
                     ))}
                   </div>
-                  <p className="mt-6 leading-relaxed text-navy/80">
-                    {p.description}
-                  </p>
+                  <p className="mt-4 leading-relaxed text-navy/70">{p.description}</p>
                 </div>
               </article>
             ))}
           </div>
 
-          <p className="mt-14 text-center text-xs uppercase tracking-widest text-navy/50 md:mt-24">
+          <p className="mt-20 text-center text-xs uppercase tracking-widest text-navy/30 md:mt-32">
             Screenshots from fethr.app
           </p>
         </div>
@@ -143,10 +164,10 @@ export default function GalleryPage() {
             Let&rsquo;s build something amazing together.
           </h2>
           <Link
-            href="/booking"
+            href="/booking#free-consultation"
             className="booking-cta-btn mt-14 inline-flex items-center gap-3"
           >
-            <span>Hire Me</span>
+            <span>Book a Free Consultation</span>
             <svg
               width="20"
               height="20"

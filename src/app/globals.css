@@ -179,6 +179,62 @@ body {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
+/* Free consultation CTA button */
+.consultation-btn {
+  padding: 14px 32px;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--cream);
+  background: var(--navy);
+  border: 2px solid var(--navy);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s ease,
+              background 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 29, 68, 0.15);
+}
+.consultation-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 36px rgba(0, 29, 68, 0.2);
+}
+.consultation-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Consultation perk cards */
+.consultation-perk-card {
+  display: flex;
+  align-items: flex-start;
+  padding: 28px 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 29, 68, 0.08);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s ease,
+              border-color 0.35s ease;
+}
+.consultation-perk-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 29, 68, 0.07);
+  border-color: rgba(0, 29, 68, 0.14);
+}
+.consultation-perk-num {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--lilac);
+  color: var(--navy);
+  font-family: var(--font-ovo);
+  font-size: 1rem;
+}
+
 /* Service list */
 .booking-service-item {
   display: flex;

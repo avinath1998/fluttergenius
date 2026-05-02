@@ -1,27 +1,49 @@
 import Image from "next/image";
 import Link from "next/link";
 import Section from "@/components/Section";
-import Marquee from "@/components/Marquee";
-import { imageAlt, imageSrc } from "@/lib/images";
+import {imageAlt, imageSrc} from "@/lib/images";
+
+const heroStats = [
+  {value: "6+", label: "Years Flutter"},
+  {value: "20+", label: "Apps Published"},
+  {value: "100%", label: "Job Success"},
+  {value: "Top Rated", label: "On Upwork"},
+];
 
 export default function HomePage() {
   return (
     <>
       {/* HERO — navy */}
       <section className="relative w-full overflow-hidden bg-navy text-lilac">
-        <div className="mx-auto grid max-w-[1500px] grid-cols-1 items-center gap-10 px-6 py-14 md:grid-cols-2 md:px-12 md:py-32">
+        <div className="mx-auto grid max-w-[1500px] grid-cols-1 items-center gap-10 px-6 py-14 md:grid-cols-[7fr_5fr] md:px-12 md:py-32">
           <div>
-            <h1 className="font-display text-7xl leading-[0.95] tracking-tight md:text-[9rem]">
-              AVINATH
+            <h1 className="font-display text-6xl leading-[0.95] tracking-tight md:text-[5.5rem]">
+              PRODUCTION APPS
             </h1>
-            <h1 className="mt-2 font-display text-5xl leading-[0.95] tracking-tight md:text-[6rem]">
-              GUNASEKARA &amp; Co.
+            <h1 className="mt-2 font-display text-4xl leading-[0.95] tracking-tight md:text-[4rem]">
+              BUILT TO SCALE
             </h1>
-            <p className="mt-10 text-xl uppercase tracking-[0.3em] text-cream md:text-2xl">
-              Flutter Engineer
-              <br />
-              &amp; Experts
+            <p className="mt-8 max-w-md text-lg leading-relaxed text-cream/70">
+              Expert Flutter engineers who ship. From MVP to production-grade apps — we partner with startups and teams to build fast, reliable, beautiful Flutter products.
             </p>
+            <p className="mt-4 text-base uppercase tracking-[0.3em] text-cream/50">
+              Avinath Gunasekara &amp; Co.
+            </p>
+            <div className="mt-10">
+              <Link href="/gallery" className="btn-outline-light">
+                See Our Work
+              </Link>
+            </div>
+
+            {/* Stats row */}
+            <div className="mt-14 grid grid-cols-4 gap-4 border-t border-lilac/20 pt-10">
+              {heroStats.map((s) => (
+                <div key={s.label}>
+                  <p className="font-display text-2xl tracking-tight md:text-3xl">{s.value}</p>
+                  <p className="mt-1 text-xs uppercase tracking-widest text-cream/50">{s.label}</p>
+                </div>
+              ))}
+            </div>
           </div>
           <div className="relative h-80 w-full md:h-[520px]">
             <Image
@@ -43,10 +65,10 @@ export default function HomePage() {
             fethr.app • London
           </p>
           <blockquote className="col-span-12 font-display text-3xl leading-snug md:col-span-9 md:text-5xl">
-            “I could not emphasise enough what a game-changing impact Avinath has
+            "I could not emphasise enough what a game-changing impact Avinath has
             made for our startup. He has proved himself to be a world-class
             flutter and firebase developer, consistently delivering complex
-            features on time and to a high standard for our mobile app.”
+            features on time and to a high standard for our mobile app."
           </blockquote>
         </div>
       </Section>
@@ -98,9 +120,6 @@ export default function HomePage() {
                 </li>
               ))}
             </ul>
-            <Link href="/booking" className="btn-outline-light mt-10">
-              Hire Me
-            </Link>
           </div>
         </div>
       </Section>
@@ -151,6 +170,7 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+
         </div>
       </section>
 
@@ -187,13 +207,13 @@ export default function HomePage() {
       <Section tone="cream">
         <div className="mx-auto max-w-5xl">
           <blockquote className="font-display text-3xl leading-snug md:text-5xl">
-            “Avinath has been an excellent developer for our project. He’s been
+            "Avinath has been an excellent developer for our project. He's been
             able to consistently deliver features and overcome hurdles and
-            issues we’ve faced. His in-depth knowledge of Flutter has helped us
-            overcome the trickiest of issues, he’s been very resourceful for our
+            issues we've faced. His in-depth knowledge of Flutter has helped us
+            overcome the trickiest of issues, he's been very resourceful for our
             team. He prioritises clear communication with the team to ensure
             accountability and this has proven to be key in delivering and
-            continuing to maintain our app.”
+            continuing to maintain our app."
           </blockquote>
           <p className="mt-8 text-sm uppercase tracking-widest">
             YellowQ • Netherlands
@@ -206,10 +226,10 @@ export default function HomePage() {
         <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-12">
           <div className="md:col-span-7">
             <p className="font-display text-2xl leading-snug md:text-3xl">
-              We’re proud organisers and supporters of Flutter Colombo. 💙
+              We're proud organisers and supporters of Flutter Colombo. 💙
             </p>
             <p className="mt-6 max-w-xl">
-              Flutter Colombo is Sri Lanka’s premier Flutter community with
+              Flutter Colombo is Sri Lanka's premier Flutter community with
               4000+ followers. An official member of the Flutter Meetup Network
               by Google, Flutter Colombo hosts meetups, hackathons, and seminars
               all year long.
@@ -235,13 +255,29 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* MARQUEE CTA — cream */}
-      <section className="bg-cream py-14 md:py-32">
-        <Marquee text="Let's create together" />
-        <div className="mt-10 flex justify-center">
-          <Link href="/booking" className="btn-outline-dark">
-            Hire Me
-          </Link>
+      {/* BOTTOM CTA — navy */}
+      <section className="bg-navy">
+        <div className="mx-auto max-w-[1500px] px-6 py-14 text-center md:px-12 md:py-32">
+          <p className="text-sm uppercase tracking-[0.35em] text-cream/50">
+            It starts with one conversation
+          </p>
+          <h2 className="mx-auto mt-6 max-w-3xl font-display text-5xl leading-[0.95] text-lilac md:text-7xl">
+            Your Flutter app deserves an expert team.
+          </h2>
+          <p className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-cream/60">
+            Book a free 30-minute call. We'll talk through your idea, answer your questions, and map out a clear path forward — no sales pitch, no commitment.
+          </p>
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
+            <Link href="/booking#free-consultation" className="btn-outline-light">
+              Book a Free Consultation
+            </Link>
+            <Link href="/gallery" className="btn-outline-light opacity-60 hover:opacity-100">
+              See Our Work First
+            </Link>
+          </div>
+          <p className="mt-8 text-sm text-cream/30">
+            Free. 30 minutes. No obligation.
+          </p>
         </div>
       </section>
     </>
