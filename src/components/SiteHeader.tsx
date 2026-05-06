@@ -1,33 +1,61 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 w-full bg-cream">
-      <div className="mx-auto flex max-w-[1500px] items-center justify-between gap-4 px-6 py-5 md:px-12">
-        <Link
-          href="/"
-          className="font-display text-lg tracking-wide text-navy hover:opacity-80"
-        >
-          Flutter Genius
-        </Link>
+    <header className="sticky top-0 z-50 w-full border-b border-navy/10 bg-cream">
+      <div className="mx-auto max-w-[1500px] px-6 md:px-12">
+        {/* Top row — logo + CTA */}
+        <div className="grid grid-cols-[1fr_auto] items-center py-4 md:grid-cols-3">
+          <Link href="/" className="hover:opacity-70 transition-opacity">
+            <Image
+              src="/images/logo.png"
+              alt="Flutter Genius"
+              width={160}
+              height={40}
+              className="h-8 w-auto"
+              priority
+            />
+          </Link>
 
-        <nav className="flex items-center gap-6 md:gap-10">
+          {/* Nav — center, desktop only */}
+          <nav className="hidden items-center justify-center gap-8 md:flex">
+            <Link
+              href="/gallery"
+              className="text-xs uppercase tracking-[0.18em] text-navy/60 hover:text-navy transition-colors"
+            >
+              See Work
+            </Link>
+            <Link
+              href="/audit"
+              className="text-xs uppercase tracking-[0.18em] text-navy/60 hover:text-navy transition-colors"
+            >
+              Free Audit
+            </Link>
+          </nav>
+
+          <div className="flex justify-end">
+            <Link href="/booking#free-consultation" className="nav-free-audit-btn">
+              Book a Consultation &rarr;
+            </Link>
+          </div>
+        </div>
+
+        {/* Mobile nav row */}
+        <div className="flex items-center justify-end gap-6 pb-3 md:hidden">
           <Link
             href="/gallery"
-            className="text-sm uppercase tracking-widest text-navy hover:opacity-70"
+            className="text-xs uppercase tracking-[0.18em] text-navy/60 hover:text-navy transition-colors"
           >
-            GALLERY
+            Work
           </Link>
           <Link
-            href="/booking#free-consultation"
-            className="hidden text-sm uppercase tracking-widest text-navy hover:opacity-70 sm:block"
+            href="/audit"
+            className="text-xs uppercase tracking-[0.18em] text-navy/60 hover:text-navy transition-colors"
           >
-            Book a Consultation
+            Free Audit
           </Link>
-          <Link href="/audit" className="nav-free-audit-btn">
-            Free Flutter Audit
-          </Link>
-        </nav>
+        </div>
       </div>
     </header>
   );

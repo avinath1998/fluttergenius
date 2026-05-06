@@ -91,16 +91,12 @@ export default function AuditPage() {
           <p className="mt-6 max-w-lg text-lg leading-relaxed text-cream/80">
             A free, no-strings review of your Flutter project.
           </p>
-          <p className="mt-4 max-w-lg text-base leading-relaxed text-cream/60">
-            Whether you&rsquo;ve shipped, you&rsquo;re mid-build, or you&rsquo;re still deciding if Flutter is the right call — I&rsquo;ll spend 30 minutes with your codebase or your plans and send back a written report within 48 hours.
-          </p>
 
           <p className="mt-8 text-xs uppercase tracking-[0.25em] text-cream/40">What you get</p>
           <ul className="mt-4 max-w-lg space-y-3">
             {[
               "A 30-minute call to understand your goals and walk through your code",
               "A 1-page written report covering architecture, performance, scalability, and the top 3 things I’d prioritise",
-              "Honest answers — including “you don’t need me” if that’s the truth",
             ].map((item) => (
               <li key={item} className="flex items-start gap-3 text-sm leading-relaxed text-cream/60">
                 <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-lilac/70" />

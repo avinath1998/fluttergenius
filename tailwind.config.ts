@@ -7,13 +7,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        cream: "#FFF6ED",
-        navy: "#001D44",
-        lilac: "#E8E1FD",
+        cream: "#FFFFFF",
+        navy: "#0C0C0C",
+        lilac: "#F2F2F2",
       },
       fontFamily: {
-        display: ["var(--font-ovo)", "serif"],
-        sans: ["var(--font-almarai)", "sans-serif"],
+        display: ["var(--font-inter)", "sans-serif"],
+        sans: ["var(--font-inter)", "sans-serif"],
       },
     },
   },

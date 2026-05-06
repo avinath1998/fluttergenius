@@ -4,7 +4,7 @@ import Section from "@/components/Section";
 import {imageAlt, imageSrc} from "@/lib/images";
 
 const heroStats = [
-  {value: "6+", label: "Years Flutter"},
+  {value: "7+", label: "Years Scaling with Flutter"},
   {value: "20+", label: "Apps Published"},
   {value: "100%", label: "Job Success"},
   {value: "Top Rated", label: "On Upwork"},
@@ -13,73 +13,73 @@ const heroStats = [
 export default function HomePage() {
   return (
     <>
-      {/* HERO — navy */}
-      <section className="relative w-full overflow-hidden bg-navy text-lilac">
-        <div className="mx-auto grid max-w-[1500px] grid-cols-1 items-center gap-10 px-6 py-14 md:grid-cols-[7fr_5fr] md:px-12 md:py-32">
-          <div>
-            <h1 className="font-display text-5xl leading-[0.95] tracking-tight md:text-[5.5rem]">
-              PRODUCTION APPS
-            </h1>
-            <h1 className="mt-2 font-display text-4xl leading-[0.95] tracking-tight md:text-[4rem]">
-              BUILT TO SCALE
-            </h1>
-            <p className="mt-8 max-w-md text-lg leading-relaxed text-cream/70">
-              Expert Flutter engineers who ship. From MVP to production-grade apps — we partner with startups and teams to build fast, reliable, beautiful Flutter products.
-            </p>
-            <p className="mt-4 text-base uppercase tracking-[0.3em] text-cream/50">
-              Avinath Gunasekara &amp; Co.
-            </p>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <Link href="/audit" className="audit-hero-btn">
-                Get a Free Flutter Audit
-              </Link>
-              <Link href="/gallery" className="btn-outline-light">
-                See Our Work
-              </Link>
-            </div>
+      {/* HERO — dark */}
+      <section className="relative w-full overflow-hidden bg-navy text-cream">
+        <div className="mx-auto max-w-[1500px] px-6 pb-16 pt-20 md:px-12 md:pb-24 md:pt-32">
+          {/* Full-width headline */}
+          <h1 className="font-display text-[4rem] leading-[0.88] md:text-[7.5vw]">
+            YOUR FLUTTER APP
+          </h1>
+          <h1 className="font-display text-[4rem] leading-[0.88] md:text-[7.5vw]">
+            DESERVES AN EXPERT TEAM.
+          </h1>
 
-            {/* Stats row */}
-            <div className="mt-14 grid grid-cols-4 gap-4 border-t border-lilac/20 pt-10">
-              {heroStats.map((s) => (
-                <div key={s.label}>
-                  <p className="font-display text-2xl tracking-tight md:text-3xl">{s.value}</p>
-                  <p className="mt-1 text-xs uppercase tracking-widest text-cream/50">{s.label}</p>
-                </div>
-              ))}
+          {/* Divider + meta row */}
+          <div className="mt-10 grid grid-cols-1 items-end gap-8 border-t border-white/10 pt-8 md:grid-cols-[1fr_auto]">
+            <div>
+              <p className="text-xs uppercase tracking-[0.3em] text-cream/40">
+                Avinath Gunasekara &amp; Co.
+              </p>
+              <p className="mt-3 max-w-md text-base leading-relaxed text-cream/60">
+                Expert Flutter engineers. From MVP to production-grade apps, we partner with startups and teams to build fast, reliable, beautiful Flutter products.
+              </p>
+            </div>
+            <div className="flex flex-col items-start gap-2">
+              <p className="text-xs uppercase tracking-[0.3em] text-cream/40">
+                Already have an app?
+              </p>
+              <div className="flex flex-col items-start gap-3 md:flex-row md:items-center md:gap-6">
+                <Link href="/audit" className="audit-hero-btn">
+                  Free Flutter Audit
+                </Link>
+                <Link href="/gallery" className="btn-outline-light">
+                  See Our Work
+                </Link>
+              </div>
             </div>
           </div>
-          <div className="relative h-80 w-full md:h-[520px]">
-            <Image
-              src={imageSrc("hero")}
-              alt={imageAlt("hero")}
-              fill
-              priority
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-contain"
-            />
+
+          {/* Stats row */}
+          <div className="mt-14 grid grid-cols-2 gap-8 border-t border-white/10 pt-10 sm:grid-cols-4">
+            {heroStats.map((s) => (
+              <div key={s.label}>
+                <p className="font-display text-3xl md:text-4xl">{s.value}</p>
+                <p className="mt-1 text-xs uppercase tracking-widest text-cream/40">{s.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* TESTIMONIAL 1 — cream */}
+      {/* TESTIMONIAL 1 — white */}
       <Section tone="cream">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
-          <p className="col-span-12 text-sm uppercase tracking-widest md:col-span-3">
-            fethr.app • London
+          <p className="text-xs uppercase tracking-[0.2em] text-[#6B6B6B] md:col-span-3">
+            fethr.app &bull; London
           </p>
-          <blockquote className="col-span-12 font-display text-3xl leading-snug md:col-span-9 md:text-5xl">
-            "I could not emphasise enough what a game-changing impact Avinath has
+          <blockquote className="font-display text-2xl leading-tight md:col-span-9 md:text-5xl">
+            &ldquo;I could not emphasise enough what a game-changing impact Avinath has
             made for our startup. He has proved himself to be a world-class
-            flutter and firebase developer, consistently delivering complex
-            features on time and to a high standard for our mobile app."
+            Flutter and Firebase developer, consistently delivering complex
+            features on time and to a high standard for our mobile app.&rdquo;
           </blockquote>
         </div>
       </Section>
 
       {/* HERO IMAGE BAND */}
       <section className="bg-cream">
-        <div className="mx-auto max-w-[1500px] px-6 py-14 md:px-12 md:py-32">
-          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl">
+        <div className="mx-auto max-w-[1500px] px-6 pb-14 md:px-12 md:pb-32">
+          <div className="relative aspect-[16/9] w-full overflow-hidden">
             <Image
               src={imageSrc("homeCoves")}
               alt={imageAlt("homeCoves")}
@@ -91,34 +91,34 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ABOUT + SERVICES — navy */}
+      {/* ABOUT + SERVICES — dark */}
       <Section tone="navy">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
           <div className="md:col-span-4">
-            <p className="text-sm uppercase tracking-widest text-cream">
+            <p className="text-xs uppercase tracking-[0.2em] text-white/40">
               A bit about me
             </p>
-            <p className="mt-6 font-display text-2xl leading-snug text-lilac md:text-3xl">
+            <p className="mt-6 text-xl leading-relaxed text-white/80 md:text-2xl">
               An engineer with a proven track record of reliability and clear
-              communication, backed by 6+ years of experience using Flutter and
+              communication, backed by 7+ years of experience using Flutter and
               numerous published applications for mobile, web and desktop.
             </p>
           </div>
           <div className="md:col-span-7 md:col-start-6">
-            <p className="text-sm uppercase tracking-widest text-cream">
+            <p className="text-xs uppercase tracking-[0.2em] text-white/40">
               Services
             </p>
-            <p className="mt-2 text-lilac/90">
+            <p className="mt-2 text-sm text-white/50">
               Ready to start? Simply reach out to begin collaborating together.
             </p>
-            <ul className="mt-10 divide-y divide-lilac/20 border-y border-lilac/20 font-display text-2xl md:text-3xl">
+            <ul className="mt-10 divide-y divide-white/10 border-y border-white/10 font-display text-2xl md:text-3xl">
               {[
                 "Flutter Development for Mobile, Web & Desktop",
                 "Team Training",
                 "Flutter & Tech Consultation",
                 "Development Team Augmentation",
               ].map((item) => (
-                <li key={item} className="py-5 text-lilac">
+                <li key={item} className="py-5 text-white">
                   {item}
                 </li>
               ))}
@@ -127,12 +127,12 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* HOW IT WORKS — cream */}
+      {/* HOW IT WORKS — white */}
       <section className="bg-cream">
         <div className="mx-auto max-w-[1500px] px-6 py-14 md:px-12 md:py-32">
           <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
-            <div className="md:col-span-5">
-              <p className="text-sm uppercase tracking-widest text-navy/50">
+            <div className="md:col-span-6">
+              <p className="text-xs uppercase tracking-[0.2em] text-navy/40">
                 How it works
               </p>
               <h2 className="mt-4 font-display text-4xl leading-tight md:text-6xl">
@@ -141,7 +141,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="mt-16 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-16 grid grid-cols-1 gap-px border border-navy/10 sm:grid-cols-2 lg:grid-cols-4">
             {[
               {
                 num: "01",
@@ -164,10 +164,10 @@ export default function HomePage() {
                 desc: "We ship your product, handle deployment and provide ongoing maintenance.",
               },
             ].map((step) => (
-              <div key={step.num} className="booking-step-card group">
+              <div key={step.num} className="booking-step-card border-0">
                 <span className="booking-step-num">{step.num}</span>
-                <h3 className="mt-6 font-display text-2xl">{step.title}</h3>
-                <p className="mt-3 leading-relaxed text-navy/70">
+                <h3 className="mt-6 font-display text-xl">{step.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-navy/60">
                   {step.desc}
                 </p>
               </div>
@@ -177,62 +177,62 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* PORTFOLIO PREVIEW — cream */}
+      {/* PORTFOLIO PREVIEW — white */}
       <Section tone="cream">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-md">
+        <p className="mb-10 text-xs uppercase tracking-[0.2em] text-navy/40">Selected work</p>
+        <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
+          <div className="relative aspect-[4/5] w-full overflow-hidden">
             <Image
               src={imageSrc("homeSpacehero")}
               alt={imageAlt("homeSpacehero")}
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover"
+              className="object-cover transition-transform duration-700 hover:scale-[1.03]"
             />
           </div>
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-md">
+          <div className="relative aspect-[4/5] w-full overflow-hidden">
             <Image
               src={imageSrc("homeTotal")}
               alt={imageAlt("homeTotal")}
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-contain"
+              className="object-contain bg-lilac transition-transform duration-700 hover:scale-[1.03]"
             />
           </div>
         </div>
-        <div className="mt-12 flex justify-center">
+        <div className="mt-10 flex justify-start">
           <Link href="/gallery" className="btn-outline-dark">
-            See Portfolio
+            View All Work &rarr;
           </Link>
         </div>
       </Section>
 
-      {/* TESTIMONIAL 2 — cream */}
-      <Section tone="cream">
+      {/* TESTIMONIAL 2 — light gray */}
+      <Section tone="lilac">
         <div className="mx-auto max-w-5xl">
-          <blockquote className="font-display text-3xl leading-snug md:text-5xl">
-            "Avinath has been an excellent developer for our project. He's been
+          <blockquote className="font-display text-2xl leading-tight md:text-5xl">
+            &ldquo;Avinath has been an excellent developer for our project. He&rsquo;s been
             able to consistently deliver features and overcome hurdles and
-            issues we've faced. His in-depth knowledge of Flutter has helped us
-            overcome the trickiest of issues, he's been very resourceful for our
-            team. He prioritises clear communication with the team to ensure
-            accountability and this has proven to be key in delivering and
-            continuing to maintain our app."
+            issues we&rsquo;ve faced. His in-depth knowledge of Flutter has helped us
+            overcome the trickiest of issues, he&rsquo;s been very resourceful for our
+            team.&rdquo;
           </blockquote>
-          <p className="mt-8 text-sm uppercase tracking-widest">
-            YellowQ • Netherlands
+          <p className="mt-8 text-xs uppercase tracking-[0.2em] text-[#6B6B6B]">
+            YellowQ &bull; Netherlands
           </p>
         </div>
       </Section>
 
-      {/* FLUTTER COLOMBO — lilac */}
-      <Section tone="lilac">
-        <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-12">
+      {/* FLUTTER COLOMBO — white */}
+      <Section tone="cream">
+        <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-12">
           <div className="md:col-span-7">
-            <p className="font-display text-2xl leading-snug md:text-3xl">
-              We're proud organisers and supporters of Flutter Colombo. 💙
+            <p className="text-xs uppercase tracking-[0.2em] text-navy/40">Community</p>
+            <p className="mt-4 font-display text-2xl leading-tight md:text-4xl">
+              Proud organisers and supporters of Flutter Colombo.
             </p>
-            <p className="mt-6 max-w-xl">
-              Flutter Colombo is Sri Lanka's premier Flutter community with
+            <p className="mt-6 max-w-xl text-sm leading-relaxed text-navy/60">
+              Flutter Colombo is Sri Lanka&rsquo;s premier Flutter community with
               4000+ followers. An official member of the Flutter Meetup Network
               by Google, Flutter Colombo hosts meetups, hackathons, and seminars
               all year long.
@@ -241,12 +241,12 @@ export default function HomePage() {
               href="https://fluttercolombo.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-outline-dark mt-8"
+              className="btn-outline-dark mt-8 inline-flex"
             >
-              Check it out
+              fluttercolombo.com &rarr;
             </Link>
           </div>
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-md md:col-span-5">
+          <div className="relative aspect-[4/3] w-full overflow-hidden md:col-span-5">
             <Image
               src={imageSrc("flutterColombo")}
               alt={imageAlt("flutterColombo")}
@@ -258,27 +258,27 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* BOTTOM CTA — navy */}
+      {/* BOTTOM CTA — dark */}
       <section className="bg-navy">
-        <div className="mx-auto max-w-[1500px] px-6 py-14 text-center md:px-12 md:py-32">
-          <p className="text-sm uppercase tracking-[0.35em] text-cream/50">
+        <div className="mx-auto max-w-[1500px] px-6 py-20 md:px-12 md:py-40">
+          <p className="text-xs uppercase tracking-[0.35em] text-white/40">
             It starts with one conversation
           </p>
-          <h2 className="mx-auto mt-6 max-w-3xl font-display text-5xl leading-[0.95] text-lilac md:text-7xl">
-            Your Flutter app deserves an expert team.
+          <h2 className="mt-8 max-w-4xl font-display text-[3.5rem] leading-[0.9] text-white md:text-[7rem]">
+            Production apps built to scale.
           </h2>
-          <p className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-cream/60">
-            Book a free 30-minute call. We'll talk through your idea, answer your questions, and map out a clear path forward — no sales pitch, no commitment.
+          <p className="mt-10 max-w-xl text-base leading-relaxed text-white/50">
+            Book a free 30-minute call. We&rsquo;ll talk through your idea, answer your questions, and map out a clear path forward.
           </p>
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-12 flex flex-wrap items-center gap-4">
             <Link href="/booking#free-consultation" className="btn-outline-light">
               Book a Consultation
             </Link>
-            <Link href="/gallery" className="btn-outline-light opacity-60 hover:opacity-100">
-              See Our Work First
+            <Link href="/gallery" className="text-xs uppercase tracking-[0.18em] text-white/40 hover:text-white/70 transition-colors">
+              See Our Work First &rarr;
             </Link>
           </div>
-          <p className="mt-8 text-sm text-cream/30">
+          <p className="mt-8 text-xs text-white/25">
             Free. 30 minutes. No obligation.
           </p>
         </div>

@@ -82,6 +82,20 @@ export default function GalleryPage() {
         </div>
       </section>
 
+      {/* ─── TESTIMONIAL ─── */}
+      <section className="bg-cream">
+        <div className="mx-auto max-w-[1500px] border-b border-navy/10 px-6 py-14 md:px-12 md:py-32">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
+            <p className="text-xs uppercase tracking-[0.2em] text-[#6B6B6B] md:col-span-3">
+              Dimitris H. &bull; Athens
+            </p>
+            <blockquote className="font-display text-2xl leading-tight md:col-span-9 md:text-5xl">
+              &ldquo;We count ourselves very fortunate to have Avinath as part of our team, and would highly recommend him to any team looking to ramp up their tech development.&rdquo;
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
       {/* ─── PROJECTS ─── */}
       <section className="bg-cream">
         <div className="mx-auto max-w-[1500px] px-6 py-14 md:px-12 md:py-32">
