@@ -167,7 +167,7 @@ export default function GalleryPage() {
             href="/booking#free-consultation"
             className="booking-cta-btn mt-14 inline-flex items-center gap-3"
           >
-            <span>Book a Free Consultation</span>
+            <span>Book a Consultation</span>
             <svg
               width="20"
               height="20"

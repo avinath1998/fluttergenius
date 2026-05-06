@@ -4,17 +4,17 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
-  title: "fluttergenius.com",
+  title: "Flutter Genius",
   metadataBase: new URL("https://www.fluttergenius.com"),
   openGraph: {
-    title: "fluttergenius.com",
-    siteName: "fluttergenius.com",
+    title: "Flutter Genius",
+    siteName: "Flutter Genius",
     url: "https://www.fluttergenius.com",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "fluttergenius.com",
+    title: "Flutter Genius",
   },
   icons: {
     icon: "https://images.squarespace-cdn.com/content/v1/6839a7dd64b2720d56fa5614/783a5711-5386-4a6f-884b-9f9bae453bd1/favicon.ico",

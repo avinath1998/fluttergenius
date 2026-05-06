@@ -8,7 +8,7 @@
 
 const USE_LOCAL = false;
 
-type ImageEntry = { remote: string; local: string; alt: string };
+type ImageEntry = {remote: string; local: string; alt: string};
 
 export const images = {
   hero: {

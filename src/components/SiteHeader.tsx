@@ -8,7 +8,7 @@ export default function SiteHeader() {
           href="/"
           className="font-display text-lg tracking-wide text-navy hover:opacity-80"
         >
-          fluttergenius.com
+          Flutter Genius
         </Link>
 
         <nav className="flex items-center gap-6 md:gap-10">
@@ -20,9 +20,12 @@ export default function SiteHeader() {
           </Link>
           <Link
             href="/booking#free-consultation"
-            className="inline-flex items-center justify-center rounded-full border-[1.5px] border-navy px-5 py-1.5 text-xs uppercase tracking-widest text-navy transition hover:bg-navy hover:text-cream"
+            className="hidden text-sm uppercase tracking-widest text-navy hover:opacity-70 sm:block"
           >
-            Book a Free Consultation
+            Book a Consultation
+          </Link>
+          <Link href="/audit" className="nav-free-audit-btn">
+            Free Flutter Audit
           </Link>
         </nav>
       </div>

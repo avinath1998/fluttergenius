@@ -50,6 +50,45 @@ body {
   animation: marquee-scroll 28s linear infinite;
 }
 
+/* Free Audit nav CTA */
+.nav-free-audit-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 28px;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--navy);
+  background: linear-gradient(135deg, #c4b4fc 0%, var(--lilac) 100%);
+  box-shadow: 0 4px 20px rgba(196, 180, 252, 0.55);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+.nav-free-audit-btn::before {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #c4b4fc, var(--lilac));
+  opacity: 0.4;
+  animation: audit-ring-pulse 2.4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  z-index: -1;
+}
+@keyframes audit-ring-pulse {
+  0%, 100% { transform: scale(1);    opacity: 0.4; }
+  55%       { transform: scale(1.12); opacity: 0;   }
+}
+.nav-free-audit-btn:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 36px rgba(196, 180, 252, 0.75);
+}
+.nav-free-audit-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
 /* ─── BOOKING PAGE ─── */
 
 /* Decorative gradient blobs */
@@ -347,4 +386,183 @@ body {
   background: rgba(0, 29, 68, 0.05);
   border: 1px solid rgba(0, 29, 68, 0.08);
   white-space: nowrap;
+}
+
+/* ─── AUDIT ─── */
+
+/* Hero CTA button (on navy bg) */
+.audit-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--navy);
+  background: linear-gradient(135deg, var(--lilac) 0%, var(--cream) 100%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  box-shadow: 0 4px 24px rgba(232, 225, 253, 0.3);
+}
+.audit-hero-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 40px rgba(232, 225, 253, 0.45);
+}
+.audit-hero-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Step entrance animation */
+.audit-step {
+  animation: booking-fade-up 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.audit-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(0, 29, 68, 0.45);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.audit-back-btn:hover {
+  color: rgba(0, 29, 68, 0.85);
+}
+
+.audit-step-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: rgba(0, 29, 68, 0.4);
+  margin-bottom: 1.25rem;
+}
+
+.audit-question {
+  font-family: var(--font-ovo);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+}
+
+/* Yes / No choice buttons */
+.audit-choice-btn {
+  min-width: 130px;
+  padding: 14px 40px;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--navy);
+  background: transparent;
+  border: 2px solid var(--navy);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+.audit-choice-btn:hover {
+  background: var(--navy);
+  color: var(--lilac);
+  transform: translateY(-2px);
+}
+.audit-choice-btn:active {
+  transform: translateY(0);
+}
+
+/* Green-field branch */
+.audit-greenfield-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: rgba(0, 29, 68, 0.45);
+}
+.audit-greenfield-heading {
+  font-family: var(--font-ovo);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+  margin-top: 0.5rem;
+}
+
+/* Textarea */
+.audit-textarea {
+  display: block;
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 16px;
+  border: 1.5px solid rgba(0, 29, 68, 0.15);
+  background: rgba(255, 255, 255, 0.7);
+  font-family: var(--font-almarai);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--navy);
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.audit-textarea:focus {
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px rgba(0, 29, 68, 0.07);
+}
+.audit-textarea::placeholder {
+  color: rgba(0, 29, 68, 0.3);
+}
+
+/* Dropdown select */
+.audit-select {
+  display: block;
+  padding: 14px 48px 14px 20px;
+  border-radius: 12px;
+  border: 1.5px solid rgba(0, 29, 68, 0.15);
+  background-color: rgba(255, 255, 255, 0.7);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23001D44' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  appearance: none;
+  font-family: var(--font-almarai);
+  font-size: 1rem;
+  color: var(--navy);
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.audit-select:focus {
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px rgba(0, 29, 68, 0.07);
+}
+
+/* Submit / Book button */
+.audit-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 40px;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--navy);
+  background: linear-gradient(135deg, var(--lilac) 0%, var(--cream) 100%);
+  box-shadow: 0 4px 24px rgba(0, 29, 68, 0.1);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+.audit-submit-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 40px rgba(0, 29, 68, 0.16);
+}
+.audit-submit-btn:active {
+  transform: translateY(0) scale(0.98);
 }

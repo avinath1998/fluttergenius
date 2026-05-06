@@ -17,7 +17,7 @@ export default function HomePage() {
       <section className="relative w-full overflow-hidden bg-navy text-lilac">
         <div className="mx-auto grid max-w-[1500px] grid-cols-1 items-center gap-10 px-6 py-14 md:grid-cols-[7fr_5fr] md:px-12 md:py-32">
           <div>
-            <h1 className="font-display text-6xl leading-[0.95] tracking-tight md:text-[5.5rem]">
+            <h1 className="font-display text-5xl leading-[0.95] tracking-tight md:text-[5.5rem]">
               PRODUCTION APPS
             </h1>
             <h1 className="mt-2 font-display text-4xl leading-[0.95] tracking-tight md:text-[4rem]">
@@ -29,7 +29,10 @@ export default function HomePage() {
             <p className="mt-4 text-base uppercase tracking-[0.3em] text-cream/50">
               Avinath Gunasekara &amp; Co.
             </p>
-            <div className="mt-10">
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Link href="/audit" className="audit-hero-btn">
+                Get a Free Flutter Audit
+              </Link>
               <Link href="/gallery" className="btn-outline-light">
                 See Our Work
               </Link>
@@ -269,7 +272,7 @@ export default function HomePage() {
           </p>
           <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
             <Link href="/booking#free-consultation" className="btn-outline-light">
-              Book a Free Consultation
+              Book a Consultation
             </Link>
             <Link href="/gallery" className="btn-outline-light opacity-60 hover:opacity-100">
               See Our Work First

@@ -57,7 +57,7 @@ export default function BookingPage() {
 
           <div className="booking-fade-up booking-fade-up--d4 mt-12">
             <Link href="#free-consultation" className="btn-outline-light">
-              Book a Free Consultation
+              Book a Consultation
             </Link>
           </div>
         </div>
@@ -90,7 +90,7 @@ export default function BookingPage() {
                 No strings attached
               </p>
               <h2 className="mt-4 font-display text-4xl leading-tight md:text-6xl">
-                Book a free consultation
+                Book a Consultation
               </h2>
               <p className="mt-6 max-w-md leading-relaxed text-navy/60">
                 Not sure where to start? Let&rsquo;s hop on a call. I&rsquo;ll
@@ -255,7 +255,7 @@ export default function BookingPage() {
               rel="noopener noreferrer"
               className="booking-cta-btn booking-cta-btn--center inline-flex items-center gap-3"
             >
-              <span>Book a Free Consultation</span>
+              <span>Book a Consultation</span>
               <svg
                 width="20"
                 height="20"
