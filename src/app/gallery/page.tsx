@@ -4,7 +4,31 @@ import type {Metadata} from "next";
 import {imageAlt, imageSrc, type ImageKey} from "@/lib/images";
 
 export const metadata: Metadata = {
-  title: "Portfolio — fluttergenius.com",
+  title: "Flutter App Portfolio — Flutter Genius",
+  description:
+    "Browse Flutter Genius's portfolio of production Flutter apps — coworking platforms, warehouse management, social apps, event tools and more, built for global clients.",
+  openGraph: {
+    title: "Flutter App Portfolio — Flutter Genius",
+    description:
+      "Browse Flutter Genius's portfolio of production Flutter apps — coworking platforms, warehouse management, social apps, event tools and more, built for global clients.",
+    url: "https://www.fluttergenius.com/gallery",
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Flutter Genius Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    title: "Flutter App Portfolio — Flutter Genius",
+    description:
+      "Browse Flutter Genius's portfolio of production Flutter apps built for global clients.",
+  },
+  alternates: {
+    canonical: "https://www.fluttergenius.com/gallery",
+  },
 };
 
 type Project = {

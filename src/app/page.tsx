@@ -1,7 +1,36 @@
+import type {Metadata} from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Section from "@/components/Section";
 import {imageAlt, imageSrc} from "@/lib/images";
+
+export const metadata: Metadata = {
+  title: "Flutter Genius | App Development Experts",
+  description:
+    "Flutter Genius builds production-grade Flutter apps for mobile, web and desktop. 7+ years experience, 20+ apps published, Top Rated on Upwork. Book a free consultation.",
+  openGraph: {
+    title: "Flutter Genius — Expert Flutter App Development",
+    description:
+      "Flutter Genius builds production-grade Flutter apps for mobile, web and desktop. 7+ years experience, 20+ apps published, Top Rated on Upwork.",
+    url: "https://www.fluttergenius.com",
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Flutter Genius — Expert Flutter App Development",
+      },
+    ],
+  },
+  twitter: {
+    title: "Flutter Genius — Expert Flutter App Development",
+    description:
+      "Flutter Genius builds production-grade Flutter apps for mobile, web and desktop. 7+ years experience, 20+ apps published, Top Rated on Upwork.",
+  },
+  alternates: {
+    canonical: "https://www.fluttergenius.com",
+  },
+};
 
 const heroStats = [
   {value: "7+", label: "Years Scaling with Flutter"},
@@ -18,10 +47,8 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1500px] px-6 pb-16 pt-20 md:px-12 md:pb-24 md:pt-32">
           {/* Full-width headline */}
           <h1 className="font-display text-[4rem] leading-[0.88] md:text-[7.5vw]">
-            YOUR FLUTTER APP
-          </h1>
-          <h1 className="font-display text-[4rem] leading-[0.88] md:text-[7.5vw]">
-            DESERVES AN EXPERT TEAM.
+            <span className="block">YOUR FLUTTER APP</span>
+            <span className="block">DESERVES AN EXPERT TEAM.</span>
           </h1>
 
           {/* Divider + meta row */}

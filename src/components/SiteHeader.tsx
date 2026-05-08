@@ -36,25 +36,28 @@ export default function SiteHeader() {
 
           <div className="flex justify-end">
             <Link href="/booking#free-consultation" className="nav-free-audit-btn">
-              Book a Consultation &rarr;
+              <span className="md:hidden">Book &rarr;</span>
+              <span className="hidden md:inline">Book a Consultation &rarr;</span>
             </Link>
           </div>
         </div>
 
         {/* Mobile nav row */}
-        <div className="flex items-center justify-end gap-6 pb-3 md:hidden">
-          <Link
-            href="/gallery"
-            className="text-xs uppercase tracking-[0.18em] text-navy/60 hover:text-navy transition-colors"
-          >
-            Work
-          </Link>
-          <Link
-            href="/audit"
-            className="text-xs uppercase tracking-[0.18em] text-navy/60 hover:text-navy transition-colors"
-          >
-            Free Audit
-          </Link>
+        <div className="flex items-center justify-end pb-3 md:hidden">
+          <div className="flex items-center gap-6">
+            <Link
+              href="/gallery"
+              className="text-xs uppercase tracking-[0.18em] text-navy/60 hover:text-navy transition-colors"
+            >
+              Work
+            </Link>
+            <Link
+              href="/audit"
+              className="text-xs uppercase tracking-[0.18em] text-navy/60 hover:text-navy transition-colors"
+            >
+              Free Audit
+            </Link>
+          </div>
         </div>
       </div>
     </header>

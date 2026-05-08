@@ -45,10 +45,8 @@ export default function BookingPage() {
             Ready to build something great?
           </p>
           <h1 className="booking-fade-up booking-fade-up--d1 mt-6 font-display text-5xl leading-[0.92] tracking-tight md:text-[8.5rem]">
-            LET&rsquo;S
-          </h1>
-          <h1 className="booking-fade-up booking-fade-up--d2 font-display text-5xl leading-[0.92] tracking-tight md:text-[8.5rem]">
-            WORK TOGETHER
+            <span className="booking-fade-up booking-fade-up--d1 block">LET&rsquo;S</span>
+            <span className="booking-fade-up booking-fade-up--d2 block">WORK TOGETHER</span>
           </h1>
           <p className="booking-fade-up booking-fade-up--d3 mt-10 max-w-xl text-lg leading-relaxed text-cream/70 md:text-xl">
             From concept to launch, I partner with startups and established
