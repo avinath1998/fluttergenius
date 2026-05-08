@@ -6,14 +6,14 @@ export default function SiteHeader() {
     <header className="sticky top-0 z-50 w-full border-b border-navy/10 bg-cream">
       <div className="mx-auto max-w-[1500px] px-6 md:px-12">
         {/* Top row — logo + CTA */}
-        <div className="grid grid-cols-[1fr_auto] items-center py-4 md:grid-cols-3">
+        <div className="grid grid-cols-[1fr_auto] items-center py-2 md:grid-cols-3">
           <Link href="/" className="hover:opacity-70 transition-opacity">
             <Image
-              src="/images/logo.png"
+              src="/images/flutter_logo_long.png"
               alt="Flutter Genius"
-              width={160}
-              height={40}
-              className="h-8 w-auto"
+              width={220}
+              height={50}
+              className="h-14 w-auto"
               priority
             />
           </Link>
