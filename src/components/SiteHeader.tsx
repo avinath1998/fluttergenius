@@ -26,12 +26,6 @@ export default function SiteHeader() {
             >
               See Work
             </Link>
-            <Link
-              href="/audit"
-              className="text-xs uppercase tracking-[0.18em] text-navy/60 hover:text-navy transition-colors"
-            >
-              Free Audit
-            </Link>
           </nav>
 
           <div className="flex justify-end">
@@ -50,12 +44,6 @@ export default function SiteHeader() {
               className="text-xs uppercase tracking-[0.18em] text-navy/60 hover:text-navy transition-colors"
             >
               Work
-            </Link>
-            <Link
-              href="/audit"
-              className="text-xs uppercase tracking-[0.18em] text-navy/60 hover:text-navy transition-colors"
-            >
-              Free Audit
             </Link>
           </div>
         </div>

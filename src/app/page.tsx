@@ -63,11 +63,11 @@ export default function HomePage() {
             </div>
             <div className="flex flex-col items-start gap-2">
               <p className="text-xs uppercase tracking-[0.3em] text-cream/40">
-                Already have an app?
+                Let&rsquo;s talk
               </p>
               <div className="flex flex-col items-start gap-3 md:flex-row md:items-center md:gap-6">
-                <Link href="/audit" className="audit-hero-btn">
-                  Free Flutter Audit
+                <Link href="/booking#free-consultation" className="audit-hero-btn">
+                  Free Strategy Call
                 </Link>
                 <Link href="/gallery" className="btn-outline-light">
                   See Our Work
