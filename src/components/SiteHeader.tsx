@@ -45,6 +45,7 @@ export default function SiteHeader() {
             <Link href="/booking#free-consultation" className="nav-free-audit-btn">
               Free Strategy Call &rarr;
             </Link>
+            {" "}
             <Link
               href="/gallery"
               className="md:hidden text-xs uppercase tracking-[0.18em] text-navy/60 hover:text-navy transition-colors"

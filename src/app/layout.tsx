@@ -5,7 +5,7 @@ import SiteFooter from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
   title: {
-    default: "Flutter Genius | App Development Experts",
+    default: "Flutter Genius | Web and mobile apps",
     template: "%s | Flutter Genius",
   },
   description:
