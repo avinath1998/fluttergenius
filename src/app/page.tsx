@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Flutter Genius builds production-grade Flutter apps for mobile, web and desktop. 7+ years experience, 20+ apps published, Top Rated on Upwork. Book a free consultation.",
   openGraph: {
-    title: "Flutter Genius — Expert Flutter App Development",
+    title: "Flutter Genius: Expert Flutter App Development",
     description:
       "Flutter Genius builds production-grade Flutter apps for mobile, web and desktop. 7+ years experience, 20+ apps published, Top Rated on Upwork.",
     url: "https://www.fluttergenius.com",
@@ -18,12 +18,12 @@ export const metadata: Metadata = {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Flutter Genius — Expert Flutter App Development",
+        alt: "Flutter Genius: Expert Flutter App Development",
       },
     ],
   },
   twitter: {
-    title: "Flutter Genius — Expert Flutter App Development",
+    title: "Flutter Genius: Expert Flutter App Development",
     description:
       "Flutter Genius builds production-grade Flutter apps for mobile, web and desktop. 7+ years experience, 20+ apps published, Top Rated on Upwork.",
   },
@@ -92,13 +92,10 @@ export default function HomePage() {
       <Section tone="cream">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
           <p className="text-xs uppercase tracking-[0.2em] text-[#6B6B6B] md:col-span-3">
-            fethr.app &bull; London
+            fethr.app, London
           </p>
           <blockquote className="font-display text-2xl leading-tight md:col-span-9 md:text-5xl">
-            &ldquo;I could not emphasise enough what a game-changing impact Avinath has
-            made for our startup. He has proved himself to be a world-class
-            Flutter and Firebase developer, consistently delivering complex
-            features on time and to a high standard for our mobile app.&rdquo;
+            &ldquo;I could not emphasise enough what a game-changing impact Avinath has made for our startup...&rdquo;
           </blockquote>
         </div>
       </Section>
@@ -245,7 +242,7 @@ export default function HomePage() {
             team.&rdquo;
           </blockquote>
           <p className="mt-8 text-xs uppercase tracking-[0.2em] text-[#6B6B6B]">
-            YellowQ &bull; Netherlands
+            YellowQ, Netherlands
           </p>
         </div>
       </Section>

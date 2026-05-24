@@ -6,7 +6,7 @@ export default function SiteFooter() {
       <div className="mx-auto flex max-w-[1500px] flex-col items-center justify-between gap-6 px-6 md:flex-row md:px-12">
         <div className="flex flex-col items-center gap-1 md:items-start">
           <p className="text-xs tracking-[0.15em] text-navy/40">
-            &copy; 2025 Avinath Gunasekara &mdash; fluttergenius.com
+            &copy; 2025 Avinath Gunasekara, fluttergenius.com
           </p>
           <p className="text-xs tracking-[0.15em] text-navy/30">
             Level 12, One Galle Face Tower, 1A Centre Road, Colombo 00200

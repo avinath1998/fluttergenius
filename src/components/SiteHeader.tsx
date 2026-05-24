@@ -36,7 +36,7 @@ export default function SiteHeader() {
               href="/gallery"
               className="text-xs uppercase tracking-[0.18em] text-navy/60 hover:text-navy transition-colors"
             >
-              See Work
+              Case Studies
             </Link>
           </nav>
 
@@ -50,7 +50,7 @@ export default function SiteHeader() {
               href="/gallery"
               className="md:hidden text-xs uppercase tracking-[0.18em] text-navy/60 hover:text-navy transition-colors"
             >
-              Work
+              Case Studies
             </Link>
           </div>
 

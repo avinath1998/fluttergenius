@@ -33,7 +33,7 @@ const consultationPerks = [
   {
     num: "01",
     title: "30-Min Discovery Call",
-    desc: "We talk through your idea, goals, and technical requirements — no jargon, no sales pitch.",
+    desc: "We talk through your idea, goals, and technical requirements. No jargon, no sales pitch.",
   },
   {
     num: "02",
@@ -165,7 +165,7 @@ export default function BookingPage() {
               </h2>
               <p className="mt-6 max-w-md leading-relaxed text-cream/70">
                 Not sure where to start? Let&rsquo;s hop on a call. I&rsquo;ll
-                help you figure out the right approach for your project — for
+                help you figure out the right approach for your project, for
                 free.
               </p>
 
@@ -323,7 +323,7 @@ export default function BookingPage() {
         <div className="mx-auto max-w-[1500px] border-t border-navy/10 px-6 py-14 md:px-12 md:py-24">
           <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
             <p className="text-xs uppercase tracking-[0.2em] text-[#6B6B6B] md:col-span-3">
-              Sam A. &bull; London
+              Sam A., London
             </p>
             <blockquote className="font-display text-xl leading-tight md:col-span-9 md:text-3xl">
               &ldquo;Working with Avinath was a pleasure. He took on a project that initially had many issues and significantly improved it. He collaborates, communicates, and contributes exceptionally well, and we look forward to working with him again on future projects. If you need someone who gets things done and adds real value with their experience, Avinath is the right choice.&rdquo;

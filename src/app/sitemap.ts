@@ -17,6 +17,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    ...["coves", "spacehero", "ekva", "slsywc", "fethr"].map((slug) => ({
+      url: `${base}/gallery/${slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
     {
       url: `${base}/booking`,
       lastModified: now,

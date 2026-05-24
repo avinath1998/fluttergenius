@@ -9,12 +9,12 @@ export const metadata: Metadata = {
     template: "%s | Flutter Genius",
   },
   description:
-    "Flutter Genius is a boutique Flutter agency led by Avinath Gunasekara. We build production-grade mobile, web and desktop apps — from MVP to scale.",
+    "Flutter Genius is a boutique Flutter agency led by Avinath Gunasekara. We build production-grade mobile, web and desktop apps, from MVP to scale.",
   metadataBase: new URL("https://www.fluttergenius.com"),
   openGraph: {
-    title: "Flutter Genius — Expert Flutter Development",
+    title: "Flutter Genius: Expert Flutter Development",
     description:
-      "Flutter Genius is a boutique Flutter agency led by Avinath Gunasekara. We build production-grade mobile, web and desktop apps — from MVP to scale.",
+      "Flutter Genius is a boutique Flutter agency led by Avinath Gunasekara. We build production-grade mobile, web and desktop apps, from MVP to scale.",
     siteName: "Flutter Genius",
     url: "https://www.fluttergenius.com",
     type: "website",
@@ -23,15 +23,15 @@ export const metadata: Metadata = {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Flutter Genius — Expert Flutter Development",
+        alt: "Flutter Genius: Expert Flutter Development",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Flutter Genius — Expert Flutter Development",
+    title: "Flutter Genius: Expert Flutter Development",
     description:
-      "Flutter Genius is a boutique Flutter agency led by Avinath Gunasekara. We build production-grade mobile, web and desktop apps — from MVP to scale.",
+      "Flutter Genius is a boutique Flutter agency led by Avinath Gunasekara. We build production-grade mobile, web and desktop apps, from MVP to scale.",
     images: ["/images/og-image.png"],
   },
   icons: {
