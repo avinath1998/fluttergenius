@@ -59,8 +59,8 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 20px;
-  font-size: 0.7rem;
+  padding: 8px 14px;
+  font-size: 0.65rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -73,6 +73,12 @@ body {
 }
 .nav-free-audit-btn:active {
   opacity: 0.9;
+}
+@media (min-width: 768px) {
+  .nav-free-audit-btn {
+    padding: 10px 20px;
+    font-size: 0.7rem;
+  }
 }
 
 /* ─── BOOKING PAGE ─── */

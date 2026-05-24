@@ -40,17 +40,16 @@ export default function SiteHeader() {
             </Link>
           </nav>
 
-          {/* Right: Free Strategy Call + Work (mobile), just CTA (desktop) */}
-          <div className="flex items-center justify-end gap-6">
-            <Link href="/booking#free-consultation" className="nav-free-audit-btn">
-              Free Strategy Call &rarr;
-            </Link>
-            {" "}
+          {/* Right: Case Studies (mobile) + Free Strategy Call */}
+          <div className="flex items-center justify-end gap-4 md:gap-6">
             <Link
               href="/gallery"
-              className="md:hidden text-xs uppercase tracking-[0.18em] text-navy/60 hover:text-navy transition-colors"
+              className="md:hidden text-xs uppercase tracking-[0.18em] text-navy/60 hover:text-navy transition-colors shrink-0"
             >
               Case Studies
+            </Link>
+            <Link href="/booking#free-consultation" className="nav-free-audit-btn whitespace-nowrap shrink-0">
+              Free Strategy Call &rarr;
             </Link>
           </div>
 
