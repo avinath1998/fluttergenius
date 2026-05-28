@@ -1,0 +1,151 @@
+---
+title: "How we taught a warehouse to see"
+description: "💸 Most startups are missing the 'AI' that actually matters, because it doesn't look like AI and it's costing them. Read about how we helped Spacehero, a valet storage business, improve their operations and onboarding."
+date: "2026-05-17"
+category: "Business"
+readingTime: "5 min read"
+---
+
+# How we taught a warehouse to see
+
+*Building a Claude-powered cataloging feature for a warehouse management system.*
+
+---
+
+A few weeks ago, I shipped a feature for Spacehero, a valet storage business based in Athens. The feature is small and quiet. It's the kind of thing a customer will never see and a warehouse worker will quickly take for granted. But it changed something about how I think about building software for operations-heavy startups.
+
+If you're a founder running anything where humans handle, count, sort, or describe physical items, I think this story will be useful to you.
+
+## The problem nobody warns you about
+
+When you run a valet storage company, customers send you their stuff. Suitcases, boxes with contents of all sorts, carpets, a small guest bed no longer in use, file boxes, a flat-screen TV that just got replaced, or a wheelchair someone used for a few months and no longer needs.
+
+Every one of those items has to be received, inspected, photographed, described, and entered into the system before it goes onto a pallet or shelf.
+
+That last bit — *described and entered* — is where time goes to die.
+
+In the early days, the warehouse team would take a photo of an item and then type out a description:
+
+> "Medium black hard-shell suitcase, minor scuff on top corner."
+
+It works. It's also slow, inconsistent ("medium" to one person is "large" to another), and prone to the kind of small errors that compound at scale.
+
+When a customer searches their inventory for *"the TV box"*, they need to find it — not scroll past *"Big cardboard thing"*, *"Sony box (large)"*, and *"electronics packaging"*.
+
+This is the issue with a lot of software that interacts with real-world operations. The operation itself works fine. The data layer underneath it is often held together by judgment calls and typing speed.
+
+## What we built
+
+The new flow is simple from the warehouse team's side.
+
+They take a photo of an item the way they always have.
+
+That's it.
+
+Within seconds, the item record fills itself in:
+
+* **Type** — a category from a fixed list (furniture, electronics, appliance, box, etc.)
+* **Name** — a short, recognizable label like *"Office Chair"*, *"Flat-screen TV"*, or *"Cardboard Moving Box"*
+* **Description** — a concise summary with color, material, rough size, and visible notable features, with explicit instructions not to speculate about contents it cannot see
+* **Confidence** — a number between 0 and 1 indicating how sure the system is
+
+The team can override anything they disagree with, but most of the time they don't need to.
+
+The fields are already filled with something better than what a human in a hurry would have typed.
+
+The behavioral shift is the part I love.
+
+Cataloging used to be a chore at the end of receiving an item.
+
+Now it's a side effect of taking the photo you were going to take anyway.
+
+## How it actually works (the non-technical version)
+
+I'll keep this simple, because the architecture is genuinely simple — and that's the point.
+
+There are three pieces:
+
+### 1. A trigger
+
+When a warehouse worker uploads a photo to the system, a small piece of code automatically wakes up.
+
+This is a cloud function — think of it as a tiny worker that only exists for the half-second it takes to do its job, and costs almost nothing to run.
+
+### 2. A workflow runner
+
+That cloud function hands the image off to PromptLayer, which is the tool we use to manage the AI side of this.
+
+PromptLayer holds the exact instructions we give to Claude, versions them like code, and lets us tweak how the system behaves without redeploying anything.
+
+### 3. The model
+
+Claude looks at the image and returns a structured output:
+
+* Name
+* Description
+* Confidence
+* Rotation
+
+All in a predictable shape the app already knows how to handle.
+
+That's the whole feature.
+
+Literally a trigger, a workflow, and a model.
+
+No new infrastructure.
+No machine learning team.
+No labeled training data.
+No six-month roadmap.
+
+The reason I'm emphasizing the simplicity is because not too long ago, building this would have been a serious project.
+
+You'd have needed:
+
+* A computer vision pipeline
+* A custom-trained model
+* An evaluation harness
+* A labeling operation
+
+Now it's a couple of files and a well-written prompt.
+
+## Why PromptLayer mattered more than I expected
+
+We could have called Claude directly from our backend, and it would have worked.
+
+But by routing through PromptLayer, the *prompt itself* — the part that tells the model what to look at, what categories to use, and what not to speculate about — lives outside the codebase.
+
+Our operations team can see what the AI is being told.
+
+We can change categories, update description rules, or add a new field without redeploying anything.
+
+We also get logs of every call, every input, every output, and every failure.
+
+## What this changed at Spacehero
+
+Cataloging is faster, and more importantly, consistent.
+
+Two different people processing two similar items now produce two similar records.
+
+Customer-facing search works better because the underlying data is cleaner.
+
+The warehouse team spends less time describing items and more time doing the parts of their job that actually require a human.
+
+## The takeaway
+
+If you're running a startup with an operational layer — a clinic, a kitchen, a workshop, or a field team — there's almost certainly a version of this hiding in your business.
+
+Somewhere, a person is looking at a thing and typing what they see.
+
+That moment is now fully automatable, and the build is small.
+
+You don't need an AI strategy.
+
+You need a list of the ten times a day someone on your team performs the same small act of perception — and a developer who can wire up a cloud function, a workflow runner, and a model.
+
+---
+
+That’s the kind of work we love doing at FlutterGenius.
+
+We build the apps, backends, and quietly intelligent systems that make operations-heavy startups feel a generation ahead of where they actually are.
+
+If you've got a bottleneck that looks like the one I just described, I'd genuinely like to hear about it.

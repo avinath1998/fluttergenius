@@ -38,6 +38,12 @@ export default function SiteHeader() {
             >
               Case Studies
             </Link>
+            <Link
+              href="/blog"
+              className="text-xs uppercase tracking-[0.18em] text-navy/60 hover:text-navy transition-colors"
+            >
+              Blog
+            </Link>
           </nav>
 
           {/* Right: Case Studies (mobile) + Free Strategy Call */}

@@ -1,6 +1,6 @@
 {
   "name": "fluttergenius-nextjs",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,7 +10,9 @@
     "download-images": "bash scripts/download-images.sh"
   },
   "dependencies": {
+    "gray-matter": "^4.0.3",
     "next": "15.1.6",
+    "next-mdx-remote": "^6.0.0",
     "react": "19.0.0",
     "react-dom": "19.0.0"
   },
